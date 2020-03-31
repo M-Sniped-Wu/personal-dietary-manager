@@ -28,6 +28,8 @@ public class FoodList extends JFrame {
 
         model = new DefaultTableModel(data, columns);
         table = new JTable(model);
+      //for testing
+        table.setName("table");
         table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         add(new JScrollPane(table), BorderLayout.NORTH);
@@ -57,6 +59,20 @@ public class FoodList extends JFrame {
 
         JTextField jtfTypeGroup = new JTextField(15);
         JLabel labelTypeGroup = new JLabel("Type/Group");
+        
+        
+        //for testing
+        jtfName.setName("field1");
+        jtfTime.setName("fieldtime");
+        jtfServing.setName("field2");
+        jtfTypeGroup.setName("field3");
+        
+        diningOptions.setName("DiningOptions");
+        
+        labelName.setName("label1");
+        labelServing.setName("label2");
+        labelTypeGroup.setName("label3");
+
 
         diningOptions.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -74,6 +90,8 @@ public class FoodList extends JFrame {
         });
 
         JButton addButton = new JButton("Add");
+      //for testing
+        addButton.setName("addButton");
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -101,6 +119,10 @@ public class FoodList extends JFrame {
         });
 
         button = new JButton("Delete selected row");
+
+      //for testing
+        button.setName("delete");
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -138,6 +160,14 @@ public class FoodList extends JFrame {
         JCheckBox checkbox2 = new JCheckBox("Grain Products");
         JCheckBox checkbox3 = new JCheckBox("Milk and Alternatives");
         JCheckBox checkbox4 = new JCheckBox("Meat and Alternatives");
+        
+      //for testing
+        checkbox1.setName("box1");
+        checkbox2.setName("box2");
+        checkbox3.setName("box3");
+        checkbox4.setName("box4");
+        
+        panelBottom.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Mark Food Groups Eaten", TitledBorder.CENTER, TitledBorder.TOP));
 
         panelBottom.add(checkbox1);
         panelBottom.add(checkbox2);
